@@ -1,0 +1,140 @@
+.card {
+  position: relative;
+  margin: auto;
+  margin-top: 200px;
+  width: 80%;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.main-content {
+  font-size: 3rem;
+  font-weight: bold;
+  user-select: none;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content span {
+  color: #819495;
+}
+
+.card-first,
+.card-second,
+.card-third {
+  position: absolute;
+  width: 300px;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+  animation: rotator 4s ease-in-out infinite;
+}
+
+.card-first {
+  top: 6rem;
+  right: 10rem;
+  z-index: 5;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  opacity: 0.9;
+  box-shadow: inset 0 1px #d6d6d6;
+}
+
+.section-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.5rem 1rem 1.5rem 1rem;
+}
+
+.section-1,
+.section-2 {
+  height: 50%;
+}
+
+.card-first .section-1 {
+  background-color: #c0c8ca;
+}
+
+.card-first .section-2 {
+  background: #1b1a1c;
+}
+
+.card-second {
+  top: 3rem;
+  right: 6rem;
+  z-index: 4;
+}
+
+.card-second .section-1 {
+  background-color: #a2a2b1;
+}
+
+.card-second .section-2 {
+  background: #afaeaf;
+}
+
+.card-third {
+  top: 0;
+  right: 2rem;
+  z-index: 3;
+}
+
+.card-third .section-1 {
+  background-color: #beb2bf;
+}
+
+.card-third .section-2 {
+  background: #949ca7;
+}
+
+.card-title {
+  font-size: 10px;
+}
+
+.card-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+}
+
+.card-icon {
+  color: #eeeeee;
+}
+
+.circle-container {
+  display: flex;
+}
+
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #b9b8b9;
+}
+
+.circle:first-child {
+  background: #424142;
+  opacity: 0.8;
+  transform: translateX(8px);
+}
+
+@keyframes rotator {
+  0% {
+    transform: translateX(0) rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: translateX(100px) rotateY(-45deg) rotateX(15deg);
+  }
+  100% {
+    transform: translate(0px) rotateY(0deg) rotateX(0deg);
+  }
+}
